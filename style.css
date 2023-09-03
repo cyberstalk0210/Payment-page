@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat+Alternates:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lilita One", cursive;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+body {
+  background-image: radial-gradient(circle, #50599a, #6d6ec5, #6c6dc4);
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  justify-items: center;
+  flex-wrap: nowrap;
+  position: fixed;
+  z-index: 1;
+  /* background-color: red; */
+}
+.navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.allDropdowns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 185px;
+}
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 10em;
+  position: relative;
+  margin: 15px 20px 15px 0px;
+}
+.iconLogo {
+  margin-left: 5em;
+  color: #fff;
+}
+.select {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  /* background-color: #23242a; */
+  transition: background 0.3s;
+}
+/* 
+    Clicked styles 
+    (added Later In JavaScript)
+*/
+/*.select-clicked{
+     border: 2px #26489a solid; 
+     box-shadow: 0 0 0.8em #26489a; 
+}*/
+/* .select:hover{
+     background: #323741; 
+} */
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  transition: 0.3s;
+  margin-left: 6px;
+}
+
+/* 
+Rotate styles 
+( added later in JavaScript) 
+*/
+.caret-rotate {
+  transform: rotate(180deg);
+}
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: transparent;
+  /* background: linear-gradient(135deg, rgba(255,255,255,0)); */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(5px);
+  /* border: 1px  #363a43 solid; */
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.4);
+  border-radius: 0.5em;
+  color: #fff;
+  /* color: #9fa5b5; */
+  position: absolute;
+  top: 3em;
+  left: 40%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.menu li:hover {
+  background: #2a2d35;
+}
+.active {
+  background: #23242a;
+}
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+.btnActivation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8em;
+  margin-top: 5px;
+  width: 120px;
+  height: 40px;
+  background: linear-gradient(90deg, #ddff7f, #81f7ee);
+  border-radius: 32px;
+  color: #fff;
+  cursor: pointer;
+
+}
+.btnActivation span {
+  font-weight: 500;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.bodyLeft {
+  width: 50%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  color: #fff;
+  left: 5em;
+  top: 30%;
+}
+.bodyLeft p {
+  font-size: 5.5em;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+.bodyLeft span {
+  font-size: 15px;
+  font-weight: 100;
+  color: #9fa6d4;
+}
+
+.btnActivate {
+  display: flex;
+  width: 150px;
+  height: 45px;
+  color: #fff;
+  background: linear-gradient(90deg, #ddff7f, #81f7ee);
+  border-radius: 32px;
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 35px;
+  /* z-index: 1; */
+}
+.btnActivate input {
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 0px;
+}
+.btnActivate img {
+  width: 16px;
+  cursor: pointer;
+  margin-left: 40px;
+  font-weight: 600;
+}
+.bodyRight {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  color: #fff;
+  justify-content: flex-end;
+  right: 15em;
+}
+.bodyRight img {
+  width: 500px;
+}
